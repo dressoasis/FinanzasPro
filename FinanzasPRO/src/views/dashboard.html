@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Responsive viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FinanzasPRO</title>
+    <!-- Link to dashboard-specific stylesheet -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <!-- Module script for session guarding or user auth -->
+    <script type="module" src="../js/guardian.js"></script>
+</head>
+
+<body>
+    <!-- Background decorative element -->
+    <div class="background"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- App logo/title -->
+        <h1 class="logo">FinanzasPRO</h1>
+        <div class="nav"> 
+            <ul class="nav-links">
+                <!-- Navigation links to other pages -->
+                <li><a href="balance.html">Balance</a></li>
+                <li><a href="categorias.html">Categoria</a></li>
+                <li><a href="reportes.html">Reporte</a></li>
+                <!-- Logout button -->
+                <button class="logout-btn" id="logout-btn">Log Out</button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard">
+        <!-- Balance summary card -->
+        <section class="card">
+            <h2>Balance</h2>
+            <p>Earnings</p>
+            <span id="earnings"></span> <!-- Earnings amount goes here -->
+            <p>Bills</p>
+            <span id="bills"></span> <!-- Bills amount goes here -->
+            <p>Total</p>
+            <div id="balance-total">
+                <!-- Total balance displayed here -->
+            </div>
+        </section>
+
+        <!-- Operations card: shows transactions -->
+        <section class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Operations</h2>
+                <!-- Link/button to add new operation -->
+                <a href="balance.html" class="new-operation-btn">+ New operation</a>
+            </div>
+
+            <!-- Placeholder image when no operations exist -->
+            <div style="text-align: center;">
+                <img src="../img/wallet.ico" alt="Empty wallet illustration">
+            </div>
+
+            <div class="tabla-section">
+                <h2>Transaction List</h2>
+            </div>
+
+            <!-- Table displaying transaction details -->
+            <table id="tabla-movimientos">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-movimientos">
+                    <!-- Rows for transactions will be injected here dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Filters section -->
+        <section class="card">
+            <h2>Filters</h2>
+
+            <div class="filtros">
+                <!-- Filter by operation type -->
+                <select id="filtro-tipo">
+                    <option value="">Type</option>
+                    <option value="compra">Purchase</option>
+                    <option value="venta">Sale</option>
+                </select>
+
+                <!-- Filter by category, options loaded dynamically -->
+                <select id="filtro-categoria">
+                    <option value="">Category</option>
+                </select>
+
+                <!-- Filter by start date -->
+                <input type="date" id="filtro-fecha-inicio" />
+                <!-- Filter by end date -->
+                <input type="date" id="filtro-fecha-fin" />
+
+                <!-- Alphabetical sorting buttons -->
+                <div class="orden-alfabetico">
+                    <button type="button" id="orden-az">A-Z</button>
+                    <button type="button" id="orden-za">Z-A</button>
+                </div>
+
+                <!-- Button to clear all filters -->
+                <button id="btn-limpiar-filtros">Clear</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Main JavaScript for dashboard functionality -->
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>

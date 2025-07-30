@@ -1,0 +1,126 @@
+:root {
+  /* Color palette variables */
+  --color-bg-body-start: #f5f5f5 ;
+
+  --color-login-bg: #00d1b2;
+  --color-input-border: #ccc;
+  --color-input-text: black;
+  --color-avatar-border: #1fdf64;
+  --color-avatar-border-hover: #62e693;
+  --color-button-bg: #1fdf64;
+  --color-button-bg-hover: #62e693;
+  --color-button-text: white;
+  --color-text-title: white;
+  --color-shadow: #00d1b2
+  --color-avatar-shadow: rgba(0, 255, 204, 0.4);
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with full height and animated background */
+body {
+  height: 100vh;
+  background: var(--color-bg-body-start);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  animation: colorchange 10s infinite;
+  transition: 2s;
+}
+
+
+/* Login card container */
+.login-container {
+  background: var(--color-login-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--color-shadow);
+  width: 100%;
+  max-width: 350px;
+  height: 500px;
+  text-align: center;
+}
+
+/* User icon image styles */
+.login-container img {
+  margin-top: -80px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: var(--color-input-border);
+  border: 2px solid var(--color-avatar-border);
+  box-shadow: 0 0 15px var(--color-avatar-shadow);
+  margin-bottom: 100px;
+}
+
+/* Avatar hover effect */
+.login-container img:hover {
+  border: 2px solid var(--color-avatar-border-hover);
+}
+
+/* Title text inside login */
+.login-container h2 {
+  margin-bottom: 24px;
+  color: var(--color-text-title);
+}
+
+/* Input fields */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid var(--color-input-border);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--color-login-bg);
+  color: var(--color-input-text);
+}
+
+/* Login button */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.login-container button:hover {
+  background-color: var(--color-button-bg-hover);
+}
+
+/* =============== Responsive Design =============== */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 20px;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .login-container img {
+    height: 80px;
+    width: 80px;
+    margin-top: -60px;
+    margin-bottom: 60px;
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-container input,
+  .login-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Responsive viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Management - Transactions</title>
+    <!-- Link to CSS specific to transactions page -->
+    <link rel="stylesheet" href="../css/movimientos.css" />
+    <!-- Module script to handle user session/auth -->
+    <script type="module" src="../js/guardian.js"></script>
+</head>
+
+<body>
+    <!-- Background styling element -->
+    <div class="fondo"></div>
+
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <!-- Logo image -->
+            <img src="../img/finanzas.ico" alt="logo">
+            <!-- Page title -->
+            <h1>Transactions</h1>
+            <div class="nav-items">
+                <!-- Logout button -->
+                <button class="logout-btn" id="logout-btn">Logout</button>
+                <!-- Link back to dashboard -->
+                <a href="dashboard.html" class="btn-ds">Back</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+        <!-- Form section to add a new transaction -->
+        <section class="form-section">
+            <h2>Add Transaction</h2>
+            <form id="form-movimiento">
+                <!-- Transaction type selection -->
+                <div class="form-group">
+                    <label for="tipo">Type</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">-- Select --</option>
+                        <option value="compra">Purchase</option>
+                        <option value="venta">Sale</option>
+                    </select>
+                </div>
+
+                <!-- Description input -->
+                <div class="form-group">
+                    <label for="descripcion">Description</label>
+                    <input type="text" id="descripcion" name="descripcion" required />
+                </div>
+
+                <!-- Amount input -->
+                <div class="form-group">
+                    <label for="importe">Amount ($)</label>
+                    <input type="number" id="importe" name="importe" min="1" required />
+                </div>
+
+                <!-- Date input -->
+                <div class="form-group">
+                    <label for="fecha">Date</label>
+                    <input type="date" id="fecha" name="fecha" required />
+                </div>
+
+                <!-- Category selection (options populated dynamically) -->
+                <div class="form-group">
+                    <label for="categoria">Category</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="" disabled>-- Select --</option>
+                    </select>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn-guardar">Save Transaction</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Script to handle transaction form and logic -->
+    <script type="module" src="../js/movimientos.js"></script>
+</body>
+</html>

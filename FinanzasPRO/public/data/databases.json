@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "001",
+      "username": "dress",
+      "password": "123456"
+    },
+    {
+      "id": "002",
+      "username": "camilo",
+      "password": "123456"
+    }
+  ],
+  "categories": [
+    {
+      "id": "930e",
+      "nombre": "carros"
+    },
+    {
+      "id": "dfd3",
+      "nombre": "herramientas"
+    },
+    {
+      "id": "7a76",
+      "nombre": "juegos"
+    }
+  ],
+  "movimientos": [
+    {
+      "id": "f271",
+      "tipo": "venta",
+      "descripcion": "cualquier monda",
+      "importe": "4444",
+      "fecha": "2025-07-10",
+      "categoryId": "dfd3"
+    },
+    {
+      "tipo": "venta",
+      "descripcion": "cualquier mondax2",
+      "importe": "5555555",
+      "fecha": "2025-07-10",
+      "categoryId": "dfd3",
+      "id": "4563"
+    },
+    {
+      "id": "ddf7",
+      "tipo": "venta",
+      "descripcion": "casas",
+      "importe": "800000",
+      "fecha": "2025-07-27",
+      "categoryId": "dfd3"
+    },
+    {
+      "id": "34eb",
+      "tipo": "compra",
+      "descripcion": "mazda",
+      "importe": "25000",
+      "fecha": "2025-07-29",
+      "categoryId": "930e"
+    }
+  ]
+}
