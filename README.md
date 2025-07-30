@@ -94,5 +94,9 @@ FinanzasPRO is a web application for personal financial management that allows u
 - Use Live Server extension in VSCode to serve the project folder locally to avoid CORS issues.  
 
 ## Contact  
+Andres Camilo Toloza Tejeda
+Malecon
+andrestolozatejeda@gmail.com
+1140895051
 For questions or support, contact the FinanzasPRO development team.
 
